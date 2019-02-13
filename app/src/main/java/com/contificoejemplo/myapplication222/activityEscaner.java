@@ -30,6 +30,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -51,7 +52,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 
-public class activityEscaner extends Activity implements EMDKListener, DataListener, StatusListener, ScannerConnectionListener, OnCheckedChangeListener {
+public class activityEscaner extends AppCompatActivity implements EMDKListener, DataListener, StatusListener, ScannerConnectionListener, OnCheckedChangeListener {
 
     private EMDKManager emdkManager = null;
     private BarcodeManager barcodeManager = null;
@@ -89,6 +90,8 @@ public class activityEscaner extends Activity implements EMDKListener, DataListe
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         setContentView(R.layout.activity_escaner);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         textViewData = (TextView)findViewById(R.id.textViewData);     // Aqui se guardan los datos leidos
         textViewStatus = (TextView)findViewById(R.id.textViewStatus); // Aqui se guardan el estado del escaner
