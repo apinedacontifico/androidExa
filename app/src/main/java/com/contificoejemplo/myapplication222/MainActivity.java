@@ -103,6 +103,8 @@ public class MainActivity extends AppCompatActivity
             //Toast.makeText(MainActivity.this,"Gallery option", Toast.LENGTH_LONG).show();
             //Log.d("mensaje", "aftertoast");
         } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(MainActivity.this, activityEscaner.class);
+            startActivity(intent);
             Toast.makeText(MainActivity.this,
                     "Slide option", Toast.LENGTH_LONG).show();
 
